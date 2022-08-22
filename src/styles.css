@@ -1,0 +1,251 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  margin: 80px auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  border: 7px solid yellow;
+  border-radius: 5px;
+  max-width: 550px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.newPost {
+  position: absolute;
+  top: -300px;
+  left: 0;
+  right: 0;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: yellow;
+  color: black;
+  transition: top 0.4s ease-in-out
+}
+
+.newPost.showCreate {
+  top: 0;
+}
+
+.newPost h1 {
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+  border-bottom: 4px solid tomato;
+}
+
+.newPost form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300px;
+}
+
+.newPost form input {
+  text-align: center;
+  padding: 5px;
+  border: 3px solid black;
+}
+
+.newPost input[type="file"] {
+  display: none;
+}
+.newPost .fileUpload {
+  border: 3px solid black;
+  text-align: center;
+  padding: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+.newPost .fileName {
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+  color: tomato
+}
+
+
+.newPost form button.submitPost {
+  text-align: center;
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: tomato;
+  cursor: pointer;
+}
+
+.newPost form .closeCreate {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: tomato;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.newPost form .errorMsg {
+  margin-top: 10px;
+  color: tomato;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header{
+  text-align: center;
+  padding: 20px 0;
+  font-size: 17px;
+  border-bottom: 2px solid white;
+}
+
+.headerButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: tomato;
+  border: none;
+  cursor: pointer;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.header button.newPostBtn{
+  background-color: yellow;
+}
+
+.login{
+  margin: 100px auto;
+  width: 350px;
+  border: 7px solid yellow;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.login h1{
+  text-align: center;
+  margin-bottom: 30px;
+  color: yellow;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;  
+}
+
+.login form input, .login form button {
+  text-align: center;
+  font-size: 20px;    
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.login form input {
+  width: 100%;
+}
+
+.login form button {
+  width: 50%;
+  background-color: tomato;
+  cursor: pointer;
+}
+
+.login form button:hover {
+  opacity: .5;
+}
+
+.login .loginMessage {
+  margin: 15px auto 0;
+  text-align: center;
+  color: tomato;
+  border-bottom: 3px solid white;
+  letter-spacing: 0.6px;
+  width: fit-content;
+  block-size: fit-content;
+}
+
+.postsFeed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.postsFeed h2 {
+  color: yellow;
+  margin-bottom: 20px;
+}
+
+.postsFeed .singlePost {
+  padding-bottom: 30px;
+  box-shadow: 0px 0px 20px 2px hsl(54deg 97% 48% / 31%);
+  margin-bottom: 20px;
+  max-width: 350px;
+}
+
+.postsFeed .singlePost .postImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.postsFeed .singlePost .postDetails {
+  position: relative;
+  padding: 20px;
+}
+
+.postsFeed .singlePost .postDetails .author {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  bottom: -20px;
+  right: 10px;
+}
+
+.author .authorName {
+  font-style: italic;
+}
+
+.author .deleteBtn {
+  background-color: tomato;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
