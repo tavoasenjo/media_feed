@@ -7,7 +7,7 @@ export const UserProvider = ({children}) => {
 
   /********** State with useReducer ***********/
   const initialUser = {
-    user: 'tavo'
+    user: ''
   }
 
   // useReducer Hook
